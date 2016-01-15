@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html ng-app="NoteTaker">
+	<head>
+		<title>NoteTaker</title>
+		<meta charset="utf-8"/>
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap.united.min.css" />
+        <link rel="stylesheet" href="css/loading-bar.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+
+        <div ng-include="'templates/navbar.html'"></div>
+        <div ng-view></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+				<script src="js/bootstrap.min.js"></script>
+				<script src="js/angular.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/node_modules/angular-loading-bar/src/loading-bar.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="js/routes.js"></script>
+
+        <script src="js/services/noteService.js"></script>
+        <script src="js/services/userService.js"></script>
+
+        <script src="js/directives/checkAvailableDirective.js"></script>
+
+        <script src="js/controllers/loginController.js"></script>
+        <script src="js/controllers/notesController.js"></script>
+
+	</body>
+</html>

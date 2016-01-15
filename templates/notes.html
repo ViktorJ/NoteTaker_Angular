@@ -1,0 +1,39 @@
+<div class="container" id="wrapper" ng-controller="NotesController">
+    <div ng-show="!isLoggedIn()">
+        <div class="alert alert-danger" role="alert"><p>Log in to access the notes</p></div>
+    </div>
+
+<div ng-show="isLoggedIn()">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <h2>Notes</h2>
+            <ul class="list-group">
+                <li class="list-unstyled" ng-repeat="note in notes">
+                    <div class="panel panel-default">
+                        <a href="" ng-click="getNoteById(note)"><div class="panel-body">
+                           {{ note.title }}
+                        </div></a>
+                    </div></li>
+            </ul>
+        </div>
+        <div class="col-sm-8 col-md-8">
+            <h1>View/Create Note</h1>
+            <form name="noteForm" ng-submit="" novalidate>
+              <div class="form-group">
+                <label>Title</label>
+                <input type="text" class="form-control" ng-model="noteData.title" placeholder="Note title" required>
+              </div>
+              <div class="form-group">
+                <label>Message</label>
+                <textarea class="form-control" rows="5" ng-model="noteData.text" placeholder="Message..." required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-success" ng-click="noteForm.$valid && saveNote()" value="Save">
+                  <button class="btn btn-warning" ng-click="newNote()">Reset</button>
+                </form>
+                <button class="btn btn-danger" ng-click="deleteNote()">Delete</button>
+              </div>
+        </div>
+    </div>            
+</div>
+</div>

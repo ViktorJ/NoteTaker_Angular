@@ -1,0 +1,20 @@
+#wrapper {
+    margin-top: 60px;
+}
+
+.ng-invalid.ng-touched {
+    border-color: #DF382C;   
+}
+
+.ng-invalid.ng-dirty {
+    border-color: #DF382C; 
+}
+
+.ng-valid.ng-dirty {
+    border-color: #2C8D3A;   
+}
+
+.panel-default > a {
+    text-decoration: none;
+    color: #333;
+}
